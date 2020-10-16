@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knock0ut.js</title>
+    <!--Pure CSS Framework Skeleton -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <!--Google fonts importing Space Mono-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Knockout.js</h1>
+      <p>First name: <input data-bind="value: firstName" /></p>
+      <p>Last name: <input data-bind="value: lastName" /></p>
+      <h2>Hello, <span data-bind="text: fullName"> </span>!</h2>
+    </header>
+    <!--Pure Js Framework Knockoutjs-->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"
+    ></script>
+    <script src="dist/main.js"></script>
+  </body>
+</html>

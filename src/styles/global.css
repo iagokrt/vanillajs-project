@@ -1,0 +1,51 @@
+/*$pallete_grey: #333333;*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Space Mono", monospace, "Poppins", sans-serif;
+}
+
+body {
+  padding: 3.5em;
+  background-color: #114455;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  color: #f1f1f1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
