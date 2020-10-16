@@ -14,4 +14,4 @@ var ViewModel = function (first, last) {
   }, this)
 }
 
-applyBindings(new ViewModel('Planet', 'Earth')) // This makes Knockout get to work
+applyBindings(new ViewModel('Planet', 'Knockout')) // This makes Knockout get to work
