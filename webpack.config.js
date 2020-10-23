@@ -6,7 +6,11 @@ module.exports = {
     rules: [
       // This tells webpack to import required html files
       // as a string, through the html-loader
-      { test: /\.html$/, use: ['html-loader'] }
+      { test: /\.html$/, use: ['html-loader'] },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   // You *could* include knockout in your bundle,

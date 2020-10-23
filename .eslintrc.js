@@ -3,9 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: [
-    'standard'
-  ],
+  extends: ['standard'],
   globals: {
     describe: true,
     it: true
@@ -15,5 +13,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
+    quotes: ['error', 'single'],
+    'space-before-function-paren': ['error', 'never']
   }
 }

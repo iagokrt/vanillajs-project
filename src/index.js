@@ -1,17 +1,18 @@
-import {
-  observable, observableArray, computed,
-  pureComputed, applyBindings, bindingHandlers
-} from 'knockout'
+import { applyBindings, computed, observable, observableArray } from 'knockout'
 
-// Here's my data model
-var ViewModel = function (first, last) {
-  this.firstName = observable(first)
-  this.lastName = observable(last)
+function WebmailViewModel() {
+  var self = this
 
-  this.fullName = computed(function () {
-    // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
-    return this.firstName() + ' ' + this.lastName()
-  }, this)
+  // Data
+  self.folders = ['Caixa de Entrada', 'Arquivados', 'Enviados', 'Spam']
+
+  // tells which folder is selected via a observable
+  self.selectedFolderId = observable()
+
+  // methods to perform behaviours
+  self.navigateToFolder = function (folder) {
+    self.selectedFolderId(folder)
+  }
 }
 
-applyBindings(new ViewModel('Planet', 'Earth')) // This makes Knockout get to work
+applyBindings(new WebmailViewModel())

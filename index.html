@@ -14,15 +14,21 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/global.css" />
   </head>
   <body>
     <header>
       <h1>Knockout.js</h1>
-      <p>First name: <input data-bind="value: firstName" /></p>
-      <p>Last name: <input data-bind="value: lastName" /></p>
-      <h2>Hello, <span data-bind="text: fullName"> </span>!</h2>
+      <h2>MailBox</h2>
     </header>
+    <ul class="folders" data-bind="foreach: folders">
+      <li
+        data-bind="text: $data,
+                   css: { selected: $data == $root.selectedFolderId() },
+                   click: $root.navigateToFolder"
+      ></li>
+    </ul>
+
     <!--Pure Js Framework Knockoutjs-->
     <script
       type="text/javascript"
